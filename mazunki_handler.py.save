@@ -1,0 +1,26 @@
+"""
+A file dedicated to handle a JSON item of Telegram's API according to mazunki's bot.
+
+This file will check for the type of message which has been received, and redirect the
+item to the correspondent function depending on the action to be held by it, defined
+here.
+
+Actions such as checking for a query is also handled in this file.
+"""
+
+def handle_message(item):
+    for key, value in item.items():
+        if key == "message":
+            for message_key, message_value in item_value.items():
+                if message_key == "message_id":
+                    print("id: ", message_value, sep="", end="")
+                    msg_id = message_value
+                elif message_key == "text":
+                    print("text:", message_value, sep="", end="")
+                    text_content = message_value
+                else:
+                    pass
+    print()
+        else:
+            print(key, value)
+    print(item)
